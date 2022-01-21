@@ -31,7 +31,7 @@ namespace WebApplication.Models
     {
         
         public ApplicationDbContext()
-            : base("Events4AllModelConString", throwIfV1Schema: false)
+            : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 

@@ -17,8 +17,8 @@ const containerStyle = {
 const GoogleMaps = (props) => {
   const [center, setCenter] = useState({ lat: 40.62, lng: 22.94 });
   //   const params = {
-  //     access_key: "cfd0f08e2d49d7ecc4762f4b3efc7724",
-  //     query: "Sapfous 160, 17675",
+  //     access_key: "",
+  //     query: "",
   //     limit: 1,
   //   };
   //   axios
@@ -34,7 +34,7 @@ const GoogleMaps = (props) => {
     $.ajax({
       url: "http://api.positionstack.com/v1/forward",
       data: {
-        access_key: "9350aa2e25610bf0c074fca63e4ce1ca",
+        access_key: "",
         query: props.address,
         country: "GR",
         limit: 1,
@@ -48,7 +48,7 @@ const GoogleMaps = (props) => {
   },[]);
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDn8rRqJ6keQQ0dvkCI3bkH-eyp0jSBRb0">
+    <LoadScript googleMapsApiKey="">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
         <Marker position={center} />
         {/* Child components, such as markers, info windows, etc. */}
